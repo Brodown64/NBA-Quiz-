@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=200, null=True)),
                 ('secs', models.IntegerField(null=True)),
-                ('questions', models.ManyToManyField(null=True, to='Quiz.QuesModel')),
+                ('questions', models.ManyToManyField(null=True, to='quiz.QuesModel')),
             ],
         ),
     ]

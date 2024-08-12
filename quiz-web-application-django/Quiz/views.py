@@ -32,13 +32,13 @@ def home(request):
             'percent':percent,
             'total':total
         }
-        return render(request,'Quiz/result.html',context)
+        return render(request,'quiz/result.html',context)
     else:
         questions=QuesModel.objects.all()
         context = {
             'questions':questions
         }
-        return render(request,'Quiz/home.html',context)
+        return render(request,'quiz/home.html',context)
 
 def addQuestion(request):    
     if request.user.is_staff:
@@ -49,7 +49,7 @@ def addQuestion(request):
                 form.save()
                 return redirect('/')
         context={'form':form}
-        return render(request,'Quiz/addQuestion.html',context)
+        return render(request,'quiz/addQuestion.html',context)
     else: 
         return redirect('home') 
 
@@ -66,7 +66,7 @@ def registerPage(request):
         context={
             'form':form,
         }
-        return render(request,'Quiz/register.html',context)
+        return render(request,'quiz/register.html',context)
 
 def loginPage(request):
     if request.user.is_authenticated:
@@ -80,7 +80,7 @@ def loginPage(request):
             login(request,user)
             return redirect('/')
        context={}
-       return render(request,'Quiz/login.html',context)
+       return render(request,'quiz/login.html',context)
 
 def logoutPage(request):
     logout(request)
