@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'NBA-Quiz-.urls'
+ROOT_URLCONF = 'MyQuiz.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'NBA-Quiz-.wsgi.application'
+WSGI_APPLICATION = 'MyQuiz.wsgi.application'
 
 
 # Database
